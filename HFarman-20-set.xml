@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+************************************************************************
+HFarman-20 simulation configuration. This files ties together all the components
+used by FGFS to represent the HFarman-20. Components include the flight data
+model, instrument panel, and external 3D model.
+************************************************************************
+version 0.5  080314 -->
+
+<PropertyList>
+ <sim>
+
+  <description>HFarman-20 biplane observation plane, (1909~10)</description>
+  <author>Emmanuel Berranger LesterBoffo moddedFDM, 3D objects and animation coding</author>
+  <status>early-production</status>
+  <rating>
+    <FDM type="int">3</FDM>
+    <systems type="int">1</systems>
+    <model type="int">4</model>
+    <cockpit type="int">2</cockpit>
+  </rating>
+
+
+  <flight-model>yasim</flight-model>
+  <aero>HFarman-20-yasim</aero>
+  <fuel-fraction>0.8</fuel-fraction>
+
+  <startup>
+   <splash-texture>Aircraft/HFarman-20/splash.jpg</splash-texture>
+  </startup>
+
+  <sound>
+   <path>Aircraft/HFarman-20/Sounds/HFarman-20-sound.xml</path>
+  </sound>
+
+  <panel>
+   <visibility archive="n">false</visibility>
+  </panel>
+
+  <model>
+   <path archive="y">Aircraft/HFarman-20/models/hfarman-20.xml</path>
+  </model>
+
+<!-- pilot viewpoint x=y y=z z=x ?  -->
+
+  <chase-distance-m type="double" archive="y"> -30 </chase-distance-m>
+
+  <view n="100">
+    <name>Tail Camera View</name>
+    <type>lookfrom</type>
+    <internal archive="y">true</internal>
+    <config>
+      <from-model type="bool">true</from-model>
+      <from-model-idx type="int">0</from-model-idx>
+      <ground-level-nearplane-m type="double">0.01f</ground-level-nearplane-m>
+      <default-field-of-view-deg type="double">30</default-field-of-view-deg>
+      <pitch-offset-deg>-5</pitch-offset-deg>
+      <x-offset-m archive="y"> 0.000 </x-offset-m> <!--Right-->
+      <y-offset-m archive="y"> 2.000 </y-offset-m> <!--Up-->
+      <z-offset-m archive="y"> 9.227 </z-offset-m> <!--Back-->
+    </config>
+  </view>
+
+  <view n="0">
+    <internal archive="y">true</internal>
+    <config>
+      <x-offset-m archive="y"> 0.000 </x-offset-m>	<!---Right-->
+      <y-offset-m archive="y"> 0.38 </y-offset-m>	<!--Up-->
+      <z-offset-m archive="y"> -1.334 </z-offset-m>	<!--Back-->
+      <pitch-offset-deg> 0 </pitch-offset-deg>
+      <default-field-of-view-deg>60</default-field-of-view-deg>
+    </config>
+  </view>
+
+  <view n="1">
+    <config>
+      <target-z-offset-m archive="y" type="double">0</target-z-offset-m>
+    </config>
+  </view>
+
+  <view n="2">
+    <config>
+      <target-z-offset-m archive="y" type="double">0</target-z-offset-m>
+    </config>
+  </view>
+
+  <view n="3">
+    <config>
+      <target-z-offset-m archive="y" type="double">0</target-z-offset-m>
+    </config>
+  </view>
+
+  <view n="4">
+    <config>
+      <target-z-offset-m archive="y" type="double">0</target-z-offset-m>
+    </config>
+  </view>
+
+  <view n="5">
+    <config>
+      <target-z-offset-m archive="y" type="double">0</target-z-offset-m>
+    </config>
+  </view>
+
+  <view n="6">
+    <config>
+      <target-z-offset-m archive="y" type="double">0</target-z-offset-m>
+    </config>
+  </view>
+  
+  <!-- Payload -->
+  <weight n="0">
+      <name>Pilot</name>
+      <weight-lb>150</weight-lb>
+      <max-lb>190</max-lb>
+      <min-lb>120</min-lb>
+  </weight> 
+
+  <weight n="1">
+      <name>Observer</name>
+      <weight-lb>0</weight-lb>
+      <max-lb>180</max-lb>
+      <min-lb>0</min-lb>
+  </weight>  
+
+
+</sim>
+
+ <controls>
+  <engines>
+   <engine n="0">
+    <magnetos>3</magnetos>
+   </engine>
+  </engines>
+ </controls>
+
+ <engines>
+  <engine>
+   <rpm type="double">0</rpm>
+  </engine>
+ </engines>
+
+ <limits>
+   <max-positive-g>2.15</max-positive-g>
+   <max-negative-g>-0.82</max-negative-g>
+   <vne>96</vne>
+ </limits>
+
+</PropertyList>

@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- H-Farman-20 : 2009 Lester-Boffo
+                 
+
+     Source       : http://en.wikipedia.org/wiki/H_Farman_20
+                 
+     Wingspan     :  8.59 m    (  25 ft  7 in )
+     Length       :  8.92 m    (  25 ft  0 in )
+     Height       :  2.69 m    (   8 ft 10 in )
+     Empty weight :  390 kg    ( 507 lb       )
+     Engine       : Gnome Lambda or LeRhone 7C, 50~70 h.p.)
+     Max speed    :  108 km/h (  65 kts      )
+-->
+
+<airplane mass="847">
+
+  <approach speed="33" aoa="4">
+    <control-setting axis="/controls/engines/engine[0]/throttle" value="0.18"/>
+    <control-setting axis="/controls/engines/engine[0]/mixture" value="1"/>
+  </approach>
+
+  <cruise speed="65" alt="0">
+    <control-setting axis="/controls/engines/engine[0]/throttle" value="1"/>
+    <control-setting axis="/controls/engines/engine[0]/mixture" value="1.0"/>
+  </cruise>
+
+  <cockpit x="-0.075" y="0" z="1.125"/>
+
+  <fuselage ax="2.373" ay="0" az="-0.296" bx="-0.92" by="0" bz="-0.010" width="0.690" taper="0.86" midpoint="0.209"/>
+
+<fuselage ax="-0.602" ay="1.908" az="0.832" bx="-4.631" by="-0.02" bz="0.569" width="0.035" taper="1" midpoint="0.5"/>
+<fuselage ax="-0.602" ay="-1.908" az="0.832" bx="-4.631" by="0.02" bz="0.569" width="0.035" taper="1" midpoint="0.5"/>
+<fuselage ax="-0.602" ay="1.908" az="-0.672" bx="-4.631" by="-0.02" bz="-0.542" width="0.035" taper="1" midpoint="0.5"/>
+<fuselage ax="-0.602" ay="-1.908" az="-0.672" bx="-4.631" by="0.02" bz="-0.542" width="0.035" taper="1" midpoint="0.5"/>
+
+  <!--
+   incidence="10"
+  -->
+  <wing x="0.224" y="0.0" z="0.8559"  
+        chord="1.5903" 
+        length="6.385"  
+        taper="1.0"
+        incidence="1.0"
+        twist="1.5" 
+        dihedral="0" 
+        camber="0.12">
+        <stall aoa="11" width="3" peak="1.25"/>
+        <flap0 start="0.51" end="1.0" lift="1.37" drag="1.52"/>
+
+        <control-input axis="/controls/flight/aileron" control="FLAP0" split="true"/>
+        <control-input axis="/controls/flight/aileron-trim" control="FLAP0" split="true"/>
+
+        <control-output control="FLAP0" side="left" prop="/surface-positions/left-aileron-pos-norm"/>
+        <control-output control="FLAP0" side="right" prop="/surface-positions/right-aileron-pos-norm"/>
+        <control-output control="FLAP0" prop="/surface-positions/aileron-pos-norm"/>
+  </wing>
+
+
+  <mstab x="0.224" y="0.0" z="-0.6589" 
+         chord="1.5903"
+         length="5.068"
+         incidence="1.5"
+         twist="1.25"
+         taper="1"
+         camber="0.12">
+         <stall aoa="11" width="3" peak="1.25"/>
+  </mstab>
+
+ <hstab x="-4.445" y="0.0" z="-0.60127" 
+         chord="1.227"
+         length="4.5265"
+         camber="0.01"
+         incidence="-0.25"
+         effectiveness="1.45"  
+         taper="0.87">
+         <stall aoa="19" width="5" peak="2.5"/>
+         <flap0 start="0" end="1.0" lift="1.7" drag="1.2"/> 
+
+         <control-input axis="/controls/flight/elevator" control="FLAP0"/>
+         <control-input axis="/controls/flight/elevator-trim" control="FLAP0"/>
+
+         <control-output control="FLAP0" prop="/surface-positions/elevator-pos-norm"/>
+  </hstab>
+
+  <vstab x="-4.9502" y="0" z="-0.2125" 
+         chord="0.907" 
+         length="1.726" 
+         taper="0.8">
+         <stall aoa="16" width="1" peak="1.5"/>
+         <flap0 start="0" end="1" lift="1.7" drag="1.2"/>
+
+         <control-input axis="/controls/flight/rudder" control="FLAP0" invert="true"/>
+         <control-input axis="/controls/flight/rudder-trim" control="FLAP0" invert="true"/>
+
+         <control-output control="FLAP0" prop="/surface-positions/rudder-pos-norm" min="1" max="-1"/>
+  </vstab>
+
+  <!-- Engines      : Anzani 3-cylinder
+
+       Informations : http://en.wikipedia.org/wiki/Anzani_3-cylinder
+
+       Type         : 3-cylinder air-cooled fan
+       Power        :   25 - 28 hp
+       Displacement : 3.53 litres (216 cu in)
+       Masse        :   65 kg (143 lb)
+  -->
+  <propeller x="-1.0348" y="0" z="0.1207"
+              radius="1.18"
+              moment="-24"
+	        cruise-speed="65"
+	        cruise-rpm="1180"
+              cruise-alt="1000" 
+	        cruise-power="60"
+              takeoff-power="70" 
+	        takeoff-rpm="1250"
+	        mass="135">
+             <actionpt x="2.063" y="0" z="0.004"/>
+             <piston-engine eng-rpm="1250"
+                            eng-power="70"
+                            displacement="488.5"
+                            bore="4.3"
+                            stroke="4.7" 
+                            min-throttle="0.063"
+                            compression="3.86"/>
+                            <control-input axis="/controls/engines/engine[0]/throttle" control="THROTTLE"/>
+                            <control-input axis="/controls/engines/engine[0]/starter" control="STARTER"/>
+                            <control-input axis="/controls/engines/engine[0]/magnetos" control="MAGNETOS"/>
+                            <control-input axis="/controls/engines/engine[0]/mixture" control="MIXTURE"/>
+  </propeller>
+
+  <!-- leftoutside -->  
+  <gear x="0.4009" y="2.209" z="-1.654" 
+        sfric="1.1"
+        dfric="0.6"
+        compression="0.02">
+  </gear>
+
+    <!-- leftinside -->  
+  <gear x="0.4009" y="1.629" z="-1.654" 
+        sfric="1.1"
+        dfric="0.6"
+        compression="0.02">
+   </gear>
+
+  <!-- rightinside -->
+  <gear x="0.4009" y="-1.629" z="-1.654" 
+        sfric="1.1"
+        dfric="0.6"
+        compression="0.02">
+  </gear>
+
+    <!-- rightoutside -->
+  <gear x="0.4009" y="-2.209" z="-1.654" 
+        sfric="1.1"
+        dfric="0.6"
+        compression="0.02">
+  </gear>
+
+  <!-- tailskid -->  
+  <gear x="-5.034" y="0" z="-1.0" 
+        sfric="0.81"
+        dfric="0.46"
+        compression="0.02">
+    <control-input axis="/controls/flight/rudder" control="STEER" src0="-1.0" src1="1.0" dst0="0.15" dst1="-0.15"/>
+  </gear>
+
+  <!-- Reservoir -->
+  <tank x="-0.0" y="0" z="-0.0089" capacity="92"/> 
+     <!-- pilot weight -->
+  <weight x=" 1.37" y="0.0" z="0.16" mass-prop="/sim/weight[0]/weight-lb"/>
+  <weight x="0.63" y="0.0" z="0.16" mass-prop="/sim/weight[1]/weight-lb"/>
+
+  <ballast x="-1.08" y="0" z="-1.10" mass="200"/>
+</airplane>
+

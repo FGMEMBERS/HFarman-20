@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+
+    <!-- RPM -->
+  <model>
+    <path>Aircraft/HFarman-20/Models/Instruments/tach/tach.xml</path>
+    <offsets>
+      <x-m>  -1.83503 </x-m>
+      <y-m>  -0.258 </y-m>
+      <z-m>  -0.08045 </z-m>
+      <roll-deg>  0.0 </roll-deg>
+      <pitch-deg>  0.0 </pitch-deg>
+      <heading-deg> 0.0 </heading-deg>
+    </offsets>
+  </model>
+
+ <!-- Magneto -->
+  <model>
+    <path>Aircraft/HFarman-20/Models/Instruments/magneto/magneto.xml</path>
+    <offsets>
+      <x-m>   -1.3754 </x-m>
+      <y-m>   0.3017 </y-m>
+      <z-m>  -0.0795 </z-m>
+      <roll-deg>    0.000 </roll-deg>
+      <pitch-deg>   0.000 </pitch-deg>
+      <heading-deg> -90.000 </heading-deg>
+    </offsets>
+  </model>
+
+ <!-- Altitude -->
+  <model>
+    <path>Aircraft/HFarman-20/Models/Instruments/alt/alt.xml</path>
+    <offsets>
+      <x-m>   -1.8403 </x-m>
+      <y-m>   0.097 </y-m>
+      <z-m>  -0.074 </z-m>
+      <roll-deg>    0.000 </roll-deg>
+      <pitch-deg>   0.000 </pitch-deg>
+      <heading-deg> 0.000 </heading-deg>
+    </offsets>
+  </model>
+
+  <!-- Compass -->
+  <model>
+    <path>Aircraft/HFarman-20/Models/Instruments/compass/compass.xml</path>
+    <offsets>
+      <x-m>   -1.823 </x-m>
+      <y-m>   0.217 </y-m>
+      <z-m>   -0.225 </z-m>
+      <roll-deg>    0.0 </roll-deg>
+      <pitch-deg>   0.0 </pitch-deg>
+      <heading-deg> -90 </heading-deg>
+    </offsets>
+  </model>
+
+  <!-- ASI -->
+  <model>
+    <path>Aircraft/HFarman-20/Models/Instruments/asi/asi.xml</path>
+    <offsets>
+      <x-m>   -1.823 </x-m>
+      <y-m>  -0.04 </y-m>
+      <z-m>   -0.074 </z-m>
+      <roll-deg>     0.000 </roll-deg>
+      <pitch-deg>    0.000 </pitch-deg>
+      <heading-deg>  0.000 </heading-deg>
+    </offsets>
+  </model>
+
+</PropertyList>
