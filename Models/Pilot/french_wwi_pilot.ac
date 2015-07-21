@@ -19489,7 +19489,7 @@ name "lunettesTr"
 loc -0.411668 -0.0903236 -0.0269656
 data 10
 lunettesTr
-texture "C:/Program Files/FlightGear2.12/data/Aircraft/Borel-Militaire/Models/Pilot/transp.png"
+texture "Aircraft/Borel-Militaire/Models/Pilot/transp.png"
 numvert 30
 0.0826189 0.809546 0.052725
 0.0857515 0.788923 0.070725
